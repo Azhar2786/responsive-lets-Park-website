@@ -156,8 +156,12 @@ section{
   border-radius: 4rem;
   color: var(--white-color);
   font-size: 1rem;
-  box-shadow: 8px 16px 16px hsla(0, 0%, 0%, 0.25)
+  border: none;
 } 
+
+.home__button:hover{
+  box-shadow: 8px 16px 16px hsla(0, 0%, 0%, 0.25)
+}
 .home__img{
   width: 780px
 }
@@ -180,4 +184,219 @@ section{
   font-size: 1rem;
   color: var(--white-color);
   text-align: center;
+}
+
+
+
+/* book  */
+
+.book__container{
+  grid-template-rows: 320px;
+  justify-content: center;
+  margin-top: 1rem;
+  row-gap: 0;
+}
+
+.book__data{
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+  justify-content: center;
+}
+
+.book__title{
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 800;
+  color: #021f41;
+}
+
+.location{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: .20rem;
+  font-size: .80rem;
+}
+
+.location h3{
+  color: #1a2e35;
+  font-size: 1rem;
+}
+
+.location h4{
+  color: #0155b7;
+}
+
+.book__seat{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.book__seat-textarea{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.seat__heading{
+  color: #0155b7;
+  font-size: 1.25rem;
+}
+
+
+.location__selector select{
+  border-radius: 4px;
+}
+
+.parking__slots{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: .50rem;
+  gap: .80rem;
+  width: 320px;
+}
+
+.slots{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  margin: 4px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+.available{
+  background-color: #0155b7;
+  color: #fff;
+}
+
+.filled{
+  background-color: gray;
+}
+
+.book__button{
+  margin-top: 1rem;
+}
+
+/* About */
+.about__container{
+  margin-top: 2rem;
+}
+
+.about__data{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  row-gap: 1.5rem;
+}
+
+.about__img{
+  width: 220px;
+
+}
+
+.about__description{
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.about__title{
+  font-size: 2rem;
+  text-align: center;
+  color: black;
+}
+
+.about__des{
+  text-align: center;
+}
+
+.l2{
+  display: flex;
+}
+
+.show-display{
+  display: none;
+}
+
+.price__container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #fff;
+  width: 300px;
+  scale: 0;
+}
+.overlay{
+  height: ;
+}
+
+.show-scale{
+  scale: 1;
+}
+
+.background{
+  background-color: rgba(0,0,0,.5);
+  opacity: 1;
+  z-index: var(--z-fixed);
+}
+
+.price{
+  color: #0155b7;
+  text-align: center;
+  font-size: .90rem;
+  margin-top: 1rem;
+}
+
+.total{
+  text-align: center;
+  margin-top: 1.25rem;
+  font-size: .90rem;
+}
+
+.use{
+  text-align: center;
+  font-size: 1.25rem;
+  color: black;
+  margin-top: 1rem;
+}
+
+.price__section{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}
+
+.input__text{
+  padding: 2px 5px;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+
+.pay__button,
+.exit__button{
+  padding: .80rem 1.5rem;
+}
+.price__buttons{
+  display: flex;
+  column-gap: 2rem;
+}
+.exit__button{
+  background-color: black;
+  color: #fff;
 }
