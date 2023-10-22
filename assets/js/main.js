@@ -60,17 +60,17 @@ const Body = document.getElementById('overlay');
 const model = document.getElementById('price__con');
 
 function showPrice(){
-    Body.classList.add('background');
+    Body.classList.add('overlayactive');
     model.classList.add('show-scale');
 }
 
 function hidePrice(){
-    Body.classList.remove('background');
+    Body.classList.remove('overlayactive');
     model.classList.remove('show-scale');
 }
 
 function showAlert(){
     alert("Slot Booked 🤩 Payment initiated")
     model.classList.remove('show-scale');
-    Body.classList.remove('background');
+    Body.classList.remove('overlayactive');
 }

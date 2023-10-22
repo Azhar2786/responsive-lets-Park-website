@@ -125,11 +125,18 @@ section{
   font-size: larger;
 }
 
-
-.home__container{
+.home{
   background-color: #fff;
   position: relative;
+  display: flex;
+  align-items: center;
   justify-content: center;
+}
+
+.home__container{
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
   margin-top: 4rem;
 }
 
@@ -190,11 +197,16 @@ section{
 
 /* book  */
 
+.book{
+  background-color: #fff;
+}
+
 .book__container{
-  grid-template-rows: 320px;
+ display: flex;
+ flex-direction: column;
   justify-content: center;
-  margin-top: 1rem;
-  row-gap: 0;
+  margin-top: 3rem;
+  row-gap: 2rem;
 }
 
 .book__data{
@@ -286,7 +298,13 @@ section{
 }
 
 /* About */
+.about{
+  background-color: #fff;
+}
+
 .about__container{
+  display: flex;
+  flex-direction: column;
   margin-top: 2rem;
 }
 
@@ -330,6 +348,10 @@ section{
 }
 
 .price__container{
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -337,9 +359,24 @@ section{
   background-color: #fff;
   width: 300px;
   scale: 0;
+  z-index: 9999999;
 }
-.overlay{
-  height: ;
+
+.overlay {
+  position: fixed;
+  background-color: #5f5f5f83;
+  top: 0;
+  opacity: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  pointer-events: none;
+  transition: 0.5s ease-in-out;
+  z-index: 999999;
+}
+.overlayactive {
+  opacity: 1;
+  pointer-events: initial;
 }
 
 .show-scale{
@@ -399,4 +436,71 @@ section{
 .exit__button{
   background-color: black;
   color: #fff;
+}
+
+
+
+@media screen and (min-width: 768px){
+  .home__img{
+    width: 450px;
+    justify-self: center;
+  }
+  .nav{
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+
+  .home__container{
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .footer{
+    height: 30vh;
+    width: 100vw;
+
+  }
+
+  .footer__container{
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+   
+  }
+
+  .book__container{
+    flex-direction: row;
+    align-items: center;
+    column-gap: 3rem;
+  }
+
+  .about{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .about__container{
+    width: 800px;
+    justify-content: center;
+  }
+
+  .about__data{
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .about__img{
+    width: 400px;
+  }
+
+  .about__description{
+    text-align: initial;
+
+  }
+ .im2{
+    order: 1;
+  }
 }
